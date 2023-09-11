@@ -1,5 +1,5 @@
 export const steps = [
-    { name: 'Property Details', href: '/property-details', status: 'current', id:1 },
+    { name: 'Property Details', href: '/', status: 'current', id:1 },
     { name: 'Rent Roll', href: '/rent-roll', status: 'upcoming', id:2 }, //complete
     { name: 'Financing', href: '/financing', status: 'upcoming', id:3 },
     { name: 'Thank You', href: '/thank-you', status: 'upcoming', id:4 },
