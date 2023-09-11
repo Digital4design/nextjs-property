@@ -13,7 +13,7 @@ const Financing = () => {
     <div>
       <h1 className='font-semibold capitalize text-lg lg:text-2xl mb-5'>Financing</h1>
 
-      <ul className="flex flex-wrap text-sm font-medium text-center text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400 -ml-8 -mr-8 px-8">
+      <ul className="flex flex-wrap text-sm font-medium text-center text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400 lg:-ml-8 lg:-mr-8 lg:px-8">
         <li className="mr-6">
             <a href="#" aria-current="page" className="inline-block text-teal-500 font-bold py-2 rounded-t-lg border-b-2 border-solid border-teal-500 active">Debt 1</a>
         </li>
@@ -24,7 +24,7 @@ const Financing = () => {
 
     <form>
       <Row className="items-end">
-        <Col className="w-1/2 mt-4">
+        <Col className="w-9/12 sm:w-1/2 mt-4">
           <Fields type="text" name="lender" id="lender" label="Lender" placeholder="" />
         </Col>
         <Col>
@@ -36,43 +36,43 @@ const Financing = () => {
         </Col>
       </Row>
       <Row className="items-end">
-        <Col className="w-1/2 mt-4">
+        <Col className="w-full md:w-1/2 mt-4">
           <Row>
-            <Col className='w-1/2'>
+            <Col className='w-full sm:w-1/2'>
               <Fields type="number" name="loan-amount" id="loan-amount" label="Loan Amount" placeholder="" iconAsText="$" iconPlacement="left" />
             </Col>
-            <Col className='w-1/2'>
+            <Col className='w-full sm:w-1/2 mt-4 lg:mt-0'>
               <Datepicker name="start-date" label="Start Date" />
             </Col>
           </Row>
         </Col>
       </Row>
       <Row className="items-end">
-        <Col className="w-2/5 mt-4">
+        <Col className="w-full md:w-2/5 mt-4">
           <GroupButton buttons={groupButton} label="Type of Rate" />
         </Col>
       </Row>
       <Row className="items-end">
-        <Col className="w-2/5 mt-4">
+        <Col className="w-full md:w-2/5 mt-4">
           <Fields type="text" name="interest-rate" id="interest-rate" label="Interest Rate" iconAsText="%" iconPlacement="right" />
         </Col>
       </Row>
       <Row>
-        <Col className='mt-4 w-1/2'>
+        <Col className='mt-4 w-full md:w-1/2'>
           <GroupButton buttons={interestCapitalization} label="Interest Capitalization" />
         </Col>
-        <Col className="w-1/2 mt-4">
+        <Col className="w-full md:w-1/2 mt-4">
           <Fields type="number" name="interest-only-period" id="interest-only-period" label="Interest Only Period" iconAsText="months" iconPlacement="right" />
         </Col>
       </Row>
       <Row>
-        <Col className="w-1/3 mt-4">
+        <Col className="w-full md:w-1/3 mt-4">
           <Fields type="number" name="term" id="term" label="Term" icon="" />
         </Col>
-        <Col className="w-1/3 mt-4">
+        <Col className="w-full md:w-1/3 mt-4">
           <Fields type="number" name="amortization" id="amortization" label="Amortization" icon="" />
         </Col>
-        <Col className="w-1/3 mt-4">
+        <Col className="w-full md:w-1/3 mt-4">
           <Fields type="number" name="financing-fees" id="financing-fees" label="Financing Fees" iconAsText="$" iconPlacement="right" />
         </Col>
       </Row>

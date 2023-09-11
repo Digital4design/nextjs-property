@@ -23,13 +23,12 @@ export default function StepsBullets() {
     checkStatus(pathname)
   },[]);
   
-  useEffect(()=>{
-    checkStatus(pathname)
-  },[id]);
-
   const onChange = (stepId) => {
     setId(stepId);
   }
+
+  {console.log(id)}
+
   return (
     <div className="px-4 py-4 lg:py-12 sm:px-6 lg:px-8 h-full border-b lg:border-r border-gray-300">
       <nav className="flex" aria-label="Progress">
@@ -39,21 +38,39 @@ export default function StepsBullets() {
                 <>
                 {
                   id < step.id ?
-                  <Link href={step.href} className="flex items-start xyz" aria-current="step" onClick={()=>onChange(step.id)}>
+                  <>
+                  <div className="absolute lg:left-2.5 top-3 -ml-px mt-0.5 h-full w-0.5 bg-black" aria-hidden="true" />
+                  <Link href={step.href} className="flex items-start" aria-current="step">
                     <span className="relative flex h-5 w-5 flex-shrink-0 items-center justify-center" aria-hidden="true">
                       <span className="absolute h-4 w-4 rounded-full bg-white border-2 border-solid border-teal-500" />
                       <span className="relative block h-2 w-2 rounded-full bg-teal-500" />
                     </span>
                     <span className="ml-3 text-sm font-medium text-gray-500">{step.name}</span>
                   </Link>
+                  </>
                   :
-                  <Link href={step.href} className="flex items-start abc" aria-current="step" onClick={()=>onChange(step.id)}>
-                    <span className="relative flex h-5 w-5 flex-shrink-0 items-center justify-center" aria-hidden="true">
-                      <span className="absolute h-4 w-4 rounded-full bg-white border-2 border-solid border-teal-500" />
-                      <span className="relative block h-2 w-2 rounded-full bg-teal-500" />
-                    </span>
-                    <span className="ml-3 text-sm font-medium text-gray-500">{step.name}</span>
-                  </Link>
+                  id === step?.id ?
+                  <>
+                  <div className="absolute -right-1/2 lg:left-2.5 top-6 -ml-px w-4 h-0.5 lg:h-3 lg:w-0.5 bg-gray-300 hidden lg:inline-block" aria-hidden="true" />
+                  <Link href={step.href} className="flex items-start" aria-current="step">
+                  <span className="relative flex h-5 w-5 flex-shrink-0 items-center justify-center" aria-hidden="true">
+                    <span className="absolute h-4 w-4 rounded-full bg-white border-2 border-solid border-teal-500" />
+                    <span className="relative block h-2 w-2 rounded-full bg-teal-500" />
+                  </span>
+                  <span className="ml-3 text-sm font-medium text-teal-500">{step.name}</span>
+                </Link>
+                </>
+                   :
+                   <>
+                   <div className="absolute left-2.5 top-5 -ml-px mt-1 h-3 w-0.5 bg-gray-300 hidden lg:inline-block " aria-hidden="true" />
+                   <Link href={step.href} className="flex items-start" aria-current="step">
+                   <span className="relative flex h-5 w-5 flex-shrink-0 items-center justify-center" aria-hidden="true">
+                     <span className="absolute h-4 w-4 rounded-full bg-white border-2 border-solid border-grey-300" />
+                     <span className="relative block h-2 w-2 rounded-full bg-white" />
+                   </span>
+                   <span className="ml-3 text-sm font-medium text-gray-500">{step.name}</span>
+                 </Link>
+                 </>
                   }
                 </>                
             </li>

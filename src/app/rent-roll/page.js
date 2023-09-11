@@ -10,10 +10,10 @@ const RentRoll = () => {
   return (
     <div>
       <Row className='mb-5'>
-        <Col className="w-1/3 lg:w-1/2">
+        <Col className="w-full md:w-1/3 lg:w-1/2">
           <h1 className='font-semibold capitalize text-lg lg:text-2xl'>Rent Roll</h1>
         </Col>
-        <Col className="w-2/3 lg:w-1/2 flex flex-wrap items-center justify-end gap-4">
+        <Col className="w-full md:w-2/3 lg:w-1/2 flex flex-wrap items-center justify-start md:justify-end gap-4">
           <div className="flex flex-wrap items-center font-bold text-sm text-teal-950 hover:text-teal-500 cursor-pointer group transition">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="black" className="w-4 h-4 mr-2 group-hover:stroke-teal-500">
               <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" />
@@ -47,7 +47,7 @@ const RentRoll = () => {
           <tbody>
             {
               tableData && tableData.length > 0 && tableData.map((data, index)=>(
-                <tr className={index == tableData.length-1 ? 'last-row' :''}>
+                <tr key={index} className={index == tableData.length-1 ? 'last-row' :''}>
                   <td className='text-start'>{data.id}</td>
                   <td className='text-start'>
                     {
