@@ -45,7 +45,7 @@ export default function StepsBullets() {
                     <div className="absolute lg:left-2.5 top-5 -ml-px mt-0.5 h-4 w-0.5 bg-black hidden lg:inline-block" aria-hidden="true" />
                     :null
                   }
-                  <Link href={step.href} className="group" onClick={()=>onChange(step?.id)}>
+                  <Link href="" className="group">
                     <span className="flex items-start">
                       <span className="relative flex h-5 w-5 flex-shrink-0 items-center justify-center">
                         <CheckCircleIcon
@@ -67,7 +67,7 @@ export default function StepsBullets() {
                     <div className="absolute -right-1/2 lg:left-2.5 top-6 -ml-px w-4 h-0.5 lg:h-3 lg:w-0.5 bg-gray-300 hidden lg:inline-block" aria-hidden="true" />
                     :null
                   }
-                   <Link href={step.href} className="flex items-start" aria-current="step" onClick={()=>onChange(step?.id)}>
+                   <Link href="" className="flex items-start" aria-current="step">
                     <span className="relative flex h-5 w-5 flex-shrink-0 items-center justify-center" aria-hidden="true">
                       <span className="absolute h-4 w-4 rounded-full bg-white border-2 border-solid border-teal-500" />
                       <span className="relative block h-2 w-2 rounded-full bg-teal-500" />
@@ -82,7 +82,7 @@ export default function StepsBullets() {
                      <div className="absolute left-2.5 top-5 -ml-px mt-1 h-3 w-0.5 bg-gray-300 hidden lg:inline-block " aria-hidden="true" />
                      :null
                    }
-                   <Link href={step.href} className="flex items-start" aria-current="step" onClick={()=>onChange(step?.id)}>
+                   <Link href="" className="flex items-start" aria-current="step">
                     <span className="relative flex h-5 w-5 flex-shrink-0 items-center justify-center" aria-hidden="true">
                       <span className="absolute h-4 w-4 rounded-full bg-white border-2 border-solid border-grey-300" />
                       <span className="relative block h-2 w-2 rounded-full bg-white" />

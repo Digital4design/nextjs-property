@@ -59,3 +59,13 @@ input::-webkit-inner-spin-button {
 input[type=number] {
   -moz-appearance: textfield;
 }
+
+.tab-btns a input[type="radio"] {
+  @apply opacity-0;
+}
+.tab-label {
+  @apply w-full text-center py-3 text-sm font-medium text-gray-500 leading-6 bg-white border border-gray-300 hover:bg-gray-300 hover:text-black focus:text-black h-12 block
+}
+.tab-btns a input[type="radio"]:checked ~ label {
+  @apply w-full text-center py-3 text-sm font-medium text-black leading-6 bg-gray-300 border border-gray-300 hover:bg-gray-300 focus:text-black h-12 cursor-pointer
+}

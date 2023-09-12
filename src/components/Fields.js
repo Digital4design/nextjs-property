@@ -1,7 +1,7 @@
 "use client";
 import React from 'react'
 
-const Fields = ({name, type, label, placeholder, id, value, icon, iconAsText, iconPlacement}) => {
+const Fields = ({name, type, label, placeholder, id, value, icon, iconAsText, iconPlacement, required, onChange}) => {
     return (
         <div>
             <label className='text-sm font-medium text-gray-500 group-hover:text-gray-900 mb-1 block'>{label}</label>
@@ -19,15 +19,17 @@ const Fields = ({name, type, label, placeholder, id, value, icon, iconAsText, ic
                     </div>
                 }
                 {iconAsText !== "" && <div className={`absolute inset-y-0 ${iconPlacement === 'right' ? 'right-0 pr-3.5': 'left-0 pl-3.5'} flex items-center pointer-events-none font-semibold text-gray-500`}>{iconAsText}</div>}
-                    <input
-                        type={type}
-                        name={name}
-                        value={value}
-                        id={id}
-                        placeholder={placeholder}
-                        className={`${iconPlacement=='right' && 'pl-4 pr-8'} ${iconPlacement =='left' ? 'pr-4 pl-8' : 'px-4'} ${iconPlacement == 'right' && iconAsText=="months" && 'pl-4 pr-20'} block w-full pt-3 pb-3 rounded-lg border-0 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-1 focus:ring-inset focus:ring-black sm:text-sm sm:leading-6 h-12`}
-                    />
-                </div>
+                <input
+                    type={type}
+                    name={name}
+                    value={value}
+                    required={required}
+                    onChange={onChange}
+                    id={id}
+                    placeholder={placeholder}
+                    className={`${iconPlacement=='right' && 'pl-4 pr-8'} ${iconPlacement =='left' ? 'pr-4 pl-8' : 'px-4'} ${iconPlacement == 'right' && iconAsText=="months" && 'pl-4 pr-20'} block w-full pt-3 pb-3 rounded-lg border-0 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-1 focus:ring-inset focus:ring-black sm:text-sm sm:leading-6 h-12`}
+                />
+            </div>
         </div>
     )
 }
