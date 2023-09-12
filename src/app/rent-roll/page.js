@@ -69,7 +69,7 @@ const RentRoll = () => {
       </div>
       
       <Col className="px-0 w-full mt-24 w-full flex items-center justify-end gap-4">
-        <Links name="continue" text="Back" className="button-as-text" path="/property-details" />
+        <Links name="continue" text="Back" className="button-as-text" path="/" />
         <Links name="continue" text="Continue" className="button" path="/financing" />
       </Col>
     </div>
